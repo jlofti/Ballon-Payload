@@ -1,0 +1,2 @@
+/usr/local/bin/arm-none-eabi-ar qc libCommandHandler.a CMakeFiles/CommandHandler.dir/src/CommandHandler.cpp.obj
+/usr/local/bin/arm-none-eabi-ranlib libCommandHandler.a

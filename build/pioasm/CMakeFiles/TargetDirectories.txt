@@ -1,0 +1,3 @@
+/Users/josephloftin/pico/Balloon/build/pioasm/CMakeFiles/pioasm.dir
+/Users/josephloftin/pico/Balloon/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/josephloftin/pico/Balloon/build/pioasm/CMakeFiles/rebuild_cache.dir
