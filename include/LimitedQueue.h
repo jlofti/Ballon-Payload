@@ -34,6 +34,8 @@ public:
         else
         {
             this->flush();
+            this->queue->push(item_);
+            this->count++;
         }
     };
 

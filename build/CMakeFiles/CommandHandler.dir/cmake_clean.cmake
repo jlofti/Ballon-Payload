@@ -1,4 +1,33 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
+  "CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj.d"
   "CMakeFiles/CommandHandler.dir/src/CommandHandler.cpp.obj"
   "CMakeFiles/CommandHandler.dir/src/CommandHandler.cpp.obj.d"
   "libCommandHandler.a"
@@ -6,6 +35,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang ASM C CXX)
   include(CMakeFiles/CommandHandler.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

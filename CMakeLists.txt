@@ -20,11 +20,13 @@ add_library(Pressure include/Pressure.h src/Pressure.cpp)
 add_library(Thermistor include/Thermistor.h src/Thermistor.cpp)
 add_library(CommandHandler include/CommandHandler.h src/CommandHandler.cpp)
 
+
 target_link_libraries(LoRa_pico_lib pico_stdlib hardware_spi hardware_gpio)
 target_link_libraries(LoRa LoRa_pico_lib hardware_gpio)
 target_link_libraries(GPS hardware_i2c pico_stdlib)
 target_link_libraries(Pressure hardware_i2c pico_stdlib)
 target_link_libraries(Thermistor hardware_adc pico_stdlib hardware_gpio)
+target_link_libraries(CommandHandler pico_sync )
 
 target_link_libraries(Balloon 
 	pico_multicore

@@ -19,7 +19,8 @@
 #include "include/Pressure.h"
 #include "include/Thermistor.h"
 #include "include/LoRa.h"
-#include "include/LimitedQueue.h"
+// #include "include/LimitedQueue.h"
+#include "include/CommandHandler.h"
 
 // Ports
 #define I2C1SDA 2
@@ -39,15 +40,6 @@
 #define POST_INIT_DELAY_MS 5000
 #define WATCHDOG_TIMEOUT_MS 3000
 #define CUTDOWN_TIME_HOURS 5
-
-// Commands
-enum cmd_t
-{
-	PING = 1,
-	CUTDOWN = 2,
-	DATA = 3,
-	REGULAR = 4
-};
 
 // Other
 #define DEBUG 0
@@ -85,10 +77,8 @@ std::shared_ptr<LoRa_t> SX1278(new LoRa_t);
 std::shared_ptr<PressureSensor_t> PressureSensor(new PressureSensor_t());
 std::shared_ptr<GPS_t> GPS(new GPS_t);
 std::shared_ptr<Thermistor_t> Thermistor(new Thermistor_t(THERMISTOR_PORT));
-std::shared_ptr<LimitedQueue_t<string>> dispatchQueue(new LimitedQueue_t<string>(100));
-std::shared_ptr<LimitedQueue_t<cmd_t>> commandQueue(new LimitedQueue_t<cmd_t>(100));
-// std::queue<string> dispatchQueue;
-// std::queue<cmd_t> commandQueue;
+std::shared_ptr<CommandHandler_t> commandHandler(new CommandHandler_t());
+
 datetime_t time = {
 	.year = 2023,
 	.month = 1,
@@ -106,64 +96,6 @@ void activateCutdown()
 	gpio_put(LED_CUTDOWN, 1);
 }
 
-void addCommand(cmd_t cmd_)
-{
-	switch (cmd_)
-	{
-	case PING:
-		commandQueue->push(PING);
-		break;
-	case CUTDOWN:
-		commandQueue->push(CUTDOWN);
-		break;
-	case DATA:
-		commandQueue->push(DATA);
-		break;
-	case REGULAR:
-		commandQueue->push(REGULAR);
-		break;
-
-	default:
-		break;
-	}
-};
-
-void dispatchCommand(cmd_t cmd_)
-{
-	char sendBuff[30] = "";
-	switch (cmd_)
-	{
-	// Ping
-	case PING:
-		printf("Ping");
-		dispatchQueue->push("Im alive");
-		break;
-
-	// Cutdown
-	case CUTDOWN:
-		printf("Cutdown");
-		activateCutdown();
-		break;
-
-	// Data
-	case DATA:
-		printf("Data");
-		snprintf(sendBuff, 30, "Temp is :%f degrees", Thermistor->tempF);
-		dispatchQueue->push(sendBuff);
-		break;
-
-	case REGULAR:
-		snprintf(sendBuff, 30, "H%dM%dS%d", time.hour, time.min, time.sec);
-		dispatchQueue->push(sendBuff);
-		break;
-
-	default:
-		break;
-	}
-
-	printf("\n");
-};
-
 /**************************************************************/
 
 // Core 2 Main loop - Deals with radio
@@ -173,9 +105,9 @@ void core1_entry()
 	while (1)
 	{
 		// Check if time to send
-		if (!dispatchQueue->isEmpty())
+		if (!commandHandler->dispatchAvailable())
 		{
-			string msg = dispatchQueue->pop();
+			std::string msg = commandHandler->getDispatch();
 			SX1278->send(msg);
 		}
 
@@ -184,7 +116,7 @@ void core1_entry()
 		// Check if packet is available
 		if (SX1278->radio.parsePacket() != 0)
 		{
-			string response = "";
+			std::string response = "";
 			printf("Received via poll: ");
 
 			// Read until done
@@ -193,12 +125,15 @@ void core1_entry()
 			{
 				response.push_back((char)SX1278->radio.read());
 			}
-			printf("%s\n", response.c_str());
 
+			// Print out recieved message
+			printf("%s", response.c_str());
 			printf("RSSI: %d\n", SX1278->radio.packetRssi());
 
 			// Add command to queue
-			addCommand(static_cast<cmd_t>(response[0] - 0x30));
+			cmd_t sid = static_cast<cmd_t>(response[0] - 0x30);
+			commandHandler->addDispatch(commandHandler->createDispatch(ACKSEND, sid));
+			commandHandler->addCommand(sid);
 			gpio_put(LED_ONBOARD, 0);
 		}
 	}
@@ -272,21 +207,21 @@ int main()
 		// Check if enough time has elapsed for regular message pings
 		if (difference >= MSG_SEND_INTERVAL_SEC)
 		{
-			addCommand(REGULAR);
+			commandHandler->addCommand(REGULAR);
 			lastTransmitSec = time.sec;
-		}
-
-		// Check if command to dispatch
-		if (!commandQueue->isEmpty())
-		{
-			cmd_t c = commandQueue->pop();
-			dispatchCommand(c);
 		}
 
 		// Activate cutdown sensor when duration achieved
 		if (time.hour >= CUTDOWN_TIME_HOURS)
 		{
-			addCommand(CUTDOWN);
+			commandHandler->addCommand(CUTDOWN);
+		}
+
+		// Check if command to dispatch
+		if (!commandHandler->commandAvailable())
+		{
+			cmd_t c = commandHandler->getCommand();
+			commandHandler->addDispatch(commandHandler->createDispatch(c, 0));
 		}
 		watchdog_update();
 		sleep_ms(1);

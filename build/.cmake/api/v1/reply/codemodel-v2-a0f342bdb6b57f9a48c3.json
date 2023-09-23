@@ -1136,42 +1136,42 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Balloon::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Balloon-Debug-b7bd0b24ede23f52455e.json",
+					"jsonFile" : "target-Balloon-Debug-5928d0a5816aea297fb9.json",
 					"name" : "Balloon",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "CommandHandler::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CommandHandler-Debug-cf12d31725e1d18af96d.json",
+					"jsonFile" : "target-CommandHandler-Debug-3aab1fe255747ce35ce6.json",
 					"name" : "CommandHandler",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-0fa471c1d70a790a6e23.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-75688358898816cb3b5d.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "GPS::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GPS-Debug-203b7aac7d6cb2a9a6cc.json",
+					"jsonFile" : "target-GPS-Debug-43927e27c005642be223.json",
 					"name" : "GPS",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "LoRa::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LoRa-Debug-f40b632601fead6395bd.json",
+					"jsonFile" : "target-LoRa-Debug-9ee5257b461432759aba.json",
 					"name" : "LoRa",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "LoRa_pico_lib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-LoRa_pico_lib-Debug-f97e11595585d5455adf.json",
+					"jsonFile" : "target-LoRa_pico_lib-Debug-93da86a19ad97b37f18e.json",
 					"name" : "LoRa_pico_lib",
 					"projectIndex" : 0
 				},
@@ -1192,14 +1192,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Pressure::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Pressure-Debug-8d67282e338a0ac13597.json",
+					"jsonFile" : "target-Pressure-Debug-e0533d69b368c3dd8502.json",
 					"name" : "Pressure",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Thermistor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Thermistor-Debug-0cf09207573fe02584a3.json",
+					"jsonFile" : "target-Thermistor-Debug-8359f20b62ce969a5b1c.json",
 					"name" : "Thermistor",
 					"projectIndex" : 0
 				},

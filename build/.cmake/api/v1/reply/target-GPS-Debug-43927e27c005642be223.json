@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libLoRa_pico_lib.a"
+			"path" : "libGPS.a"
 		}
 	],
 	"backtrace" : 1,
@@ -29,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
@@ -50,7 +50,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 23,
+				"line" : 26,
 				"parent" : 0
 			}
 		]
@@ -242,11 +242,7 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				},
 				{
 					"backtrace" : 5,
@@ -286,14 +282,6 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/include"
 				},
 				{
@@ -302,11 +290,15 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
 				},
 				{
 					"backtrace" : 5,
@@ -315,6 +307,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
 				},
 				{
 					"backtrace" : 5,
@@ -331,6 +327,14 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
 				},
 				{
 					"backtrace" : 5,
@@ -391,10 +395,6 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/include"
 				}
 			],
 			"language" : "CXX",
@@ -408,8 +408,8 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				43
+				1,
+				44
 			]
 		},
 		{
@@ -581,11 +581,7 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				},
 				{
 					"backtrace" : 5,
@@ -625,14 +621,6 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/include"
 				},
 				{
@@ -641,11 +629,15 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
 				},
 				{
 					"backtrace" : 5,
@@ -654,6 +646,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
 				},
 				{
 					"backtrace" : 5,
@@ -670,6 +666,14 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
 				},
 				{
 					"backtrace" : 5,
@@ -730,10 +734,6 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/include"
 				}
 			],
 			"language" : "C",
@@ -753,8 +753,8 @@
 				5,
 				6,
 				7,
+				8,
 				9,
-				10,
 				11,
 				12,
 				13,
@@ -769,15 +769,15 @@
 				22,
 				23,
 				24,
-				26,
+				25,
 				27,
-				29,
-				32,
+				28,
+				30,
 				33,
-				37,
+				34,
 				38,
-				40,
-				44,
+				39,
+				41,
 				45,
 				46,
 				47
@@ -949,11 +949,7 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/include"
 				},
 				{
 					"backtrace" : 5,
@@ -993,14 +989,6 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
-				},
-				{
-					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/include"
 				},
 				{
@@ -1009,11 +997,15 @@
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/include"
 				},
 				{
 					"backtrace" : 5,
@@ -1022,6 +1014,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
 				},
 				{
 					"backtrace" : 5,
@@ -1038,6 +1034,14 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/include"
 				},
 				{
 					"backtrace" : 5,
@@ -1098,26 +1102,22 @@
 				{
 					"backtrace" : 5,
 					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/boot_stage2/include"
-				},
-				{
-					"backtrace" : 5,
-					"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/include"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				8,
-				25,
-				28,
-				30,
+				10,
+				26,
+				29,
 				31,
-				34,
+				32,
 				35,
 				36,
-				39,
-				41,
-				42
+				37,
+				40,
+				42,
+				43
 			]
 		}
 	],
@@ -1128,9 +1128,9 @@
 			"id" : "bs2_default_padded_checksummed_asm::@bc554eaed616d198a22d"
 		}
 	],
-	"id" : "LoRa_pico_lib::@6890427a1f51a3e7e1df",
-	"name" : "LoRa_pico_lib",
-	"nameOnDisk" : "libLoRa_pico_lib.a",
+	"id" : "GPS::@6890427a1f51a3e7e1df",
+	"name" : "GPS",
+	"nameOnDisk" : "libGPS.a",
 	"paths" : 
 	{
 		"build" : ".",
@@ -1139,18 +1139,25 @@
 	"sourceGroups" : 
 	[
 		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
+				1,
 				2,
 				3,
 				4,
 				5,
 				6,
 				7,
+				8,
 				9,
-				10,
 				11,
 				12,
 				13,
@@ -1165,15 +1172,15 @@
 				22,
 				23,
 				24,
-				26,
+				25,
 				27,
-				29,
-				32,
+				28,
+				30,
 				33,
-				37,
+				34,
 				38,
-				40,
-				43,
+				39,
+				41,
 				44,
 				45,
 				46,
@@ -1181,27 +1188,20 @@
 			]
 		},
 		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				1
-			]
-		},
-		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				8,
-				25,
-				28,
-				30,
+				10,
+				26,
+				29,
 				31,
-				34,
+				32,
 				35,
 				36,
-				39,
-				41,
-				42
+				37,
+				40,
+				42,
+				43
 			]
 		}
 	],
@@ -1209,50 +1209,62 @@
 	[
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/LoRa-RP2040.cpp",
+			"path" : "include/GPS.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/LoRa-RP2040.h",
+			"compileGroupIndex" : 0,
+			"path" : "src/GPS.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c",
-			"sourceGroupIndex" : 0
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1264,97 +1276,91 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 1,
+			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1366,13 +1372,13 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1384,7 +1390,7 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1402,13 +1408,13 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1432,13 +1438,13 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1450,7 +1456,7 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
@@ -1468,31 +1474,25 @@
 			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 5,
 			"compileGroupIndex" : 1,
 			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 5,
-			"compileGroupIndex" : 1,
-			"path" : "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c",
-			"sourceGroupIndex" : 0
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "STATIC_LIBRARY"
