@@ -56,17 +56,15 @@ bool CommandHandler_t::commandAvailable() {
 };
 
 std::string CommandHandler_t::getDispatch() {
-    std::string dispatch = "";
     sem_acquire_blocking(dispatchSem.get());
-    dispatch = dispatchQueue->pop();
+    std::string dispatch = dispatchQueue->pop();
     sem_release(dispatchSem.get());
     return dispatch;
 };
 
 cmd_t CommandHandler_t::getCommand() {
-    cmd_t cmd;
     sem_acquire_blocking(commandSem.get());
-    cmd = commandQueue->pop();
+    cmd_t cmd = commandQueue->pop();
     sem_release(commandSem.get());
     return cmd;
 }
