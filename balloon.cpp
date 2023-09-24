@@ -38,11 +38,11 @@
 // Timing
 #define MSG_SEND_INTERVAL_SEC 5
 #define POST_INIT_DELAY_MS 5000
-#define WATCHDOG_TIMEOUT_MS 3000
+#define WATCHDOG_TIMEOUT_MS 10000
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
-#define DEBUG 0
+#define DEBUG 1
 #define EVER \
 	;        \
 	;
@@ -202,7 +202,7 @@ int main()
 		// Sensor Reads
 		PressureSensor->readTempPressure();
 		Thermistor->readTemp();
-		GPS->readI2CGPS();
+		GPS->readI2CGPS(GPS->getAvailableReadBytes());
 
 		// Check if enough time has elapsed for regular message pings
 		if (difference >= MSG_SEND_INTERVAL_SEC)
