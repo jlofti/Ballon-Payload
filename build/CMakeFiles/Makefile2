@@ -1499,14 +1499,14 @@ pico-sdk/tools/clean:
 # Target rules for target CMakeFiles/Balloon.dir
 
 # All Build rule for target.
+CMakeFiles/Balloon.dir/all: CMakeFiles/CommandHandler.dir/all
+CMakeFiles/Balloon.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/LoRa_pico_lib.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/LoRa_print.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/LoRa.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/GPS.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/Pressure.dir/all
 CMakeFiles/Balloon.dir/all: CMakeFiles/Thermistor.dir/all
-CMakeFiles/Balloon.dir/all: CMakeFiles/CommandHandler.dir/all
-CMakeFiles/Balloon.dir/all: CMakeFiles/ELF2UF2Build.dir/all
 CMakeFiles/Balloon.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/build

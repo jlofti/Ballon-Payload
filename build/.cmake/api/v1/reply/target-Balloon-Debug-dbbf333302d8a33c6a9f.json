@@ -1414,6 +1414,14 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "CommandHandler::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "LoRa_pico_lib::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -1435,14 +1443,6 @@
 		{
 			"backtrace" : 2,
 			"id" : "Thermistor::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "CommandHandler::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 10,
-			"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 11,

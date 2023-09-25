@@ -42,7 +42,7 @@
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
-#define DEBUG 1
+#define DEBUG 0
 #define EVER \
 	;        \
 	;
@@ -123,17 +123,26 @@ void core1_entry()
 			gpio_put(LED_ONBOARD, 1);
 			while (SX1278->radio.available())
 			{
-				response.push_back((char)SX1278->radio.read());
+				char c = SX1278->radio.read();
+				response.push_back(c);
 			}
 
 			// Print out recieved message
 			printf("%s", response.c_str());
-			printf("RSSI: %d\n", SX1278->radio.packetRssi());
+			printf(" RSSI: %d\n", SX1278->radio.packetRssi());
 
 			// Add command to queue
-			cmd_t sid = static_cast<cmd_t>(response[0] - 0x30);
-			commandHandler->addDispatch(commandHandler->createDispatch(ACKSEND, sid));
-			commandHandler->addCommand(sid);
+			// cmd_t sid = static_cast<cmd_t>(response[0] - 0x30);
+
+			if (commandHandler->validateCommand(response))
+			{
+				uint32_t cmd = commandHandler->sanitizeCommand(response);
+				commandHandler->addCommand(cmd);
+			}
+			else
+			{
+				printf("Inavlid command received\n");
+			}
 			gpio_put(LED_ONBOARD, 0);
 		}
 	}
@@ -207,7 +216,7 @@ int main()
 		// Check if enough time has elapsed for regular message pings
 		if (difference >= MSG_SEND_INTERVAL_SEC)
 		{
-			commandHandler->addCommand(REGULAR);
+			commandHandler->addCommand(REGULAR_TRANSMISSION);
 			lastTransmitSec = time.sec;
 		}
 
@@ -220,8 +229,8 @@ int main()
 		// Check if command to dispatch
 		if (!commandHandler->commandAvailable())
 		{
-			cmd_t c = commandHandler->getCommand();
-			commandHandler->addDispatch(commandHandler->createDispatch(c, 0));
+			uint32_t cmd = commandHandler->getCommand();
+			commandHandler->executeCommand(cmd);
 		}
 		watchdog_update();
 		sleep_ms(1);
