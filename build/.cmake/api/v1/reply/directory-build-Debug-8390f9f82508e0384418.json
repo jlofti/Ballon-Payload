@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "build",
+		"source" : "include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI"
+	}
+}

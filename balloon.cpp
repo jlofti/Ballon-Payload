@@ -20,6 +20,7 @@
 #include "include/Thermistor.h"
 #include "include/LoRa.h"
 #include "include/CommandHandler.h"
+#include "include/SDCard.h"
 
 // Ports
 #define I2C1SDA 2
@@ -38,7 +39,7 @@
 #define MSG_SEND_INTERVAL_SEC 5
 #define DEBUG_PRINT_INTERVAL 5
 #define POST_INIT_DELAY_MS 5000
-#define WATCHDOG_TIMEOUT_MS 10000
+#define WATCHDOG_TIMEOUT_MS 1000000
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
@@ -78,8 +79,9 @@ std::shared_ptr<PressureSensor_t> PressureSensor(new PressureSensor_t());
 std::shared_ptr<GPS_t> GPS(new GPS_t);
 std::shared_ptr<Thermistor_t> Thermistor(new Thermistor_t(THERMISTOR_PORT));
 std::shared_ptr<CommandHandler_t> commandHandler(new CommandHandler_t());
+std::shared_ptr<SD_Card_t> SD(new SD_Card_t());
 
-datetime_t time = {
+datetime_t curTime = {
 	.year = 2023,
 	.month = 1,
 	.day = 1,
@@ -164,14 +166,15 @@ int main()
 	blinkRed();
 	sleep_ms(POST_INIT_DELAY_MS);
 
-	int lastTransmitSec = time.sec;
-	int lastPrintSec = time.sec;
-	rtc_set_datetime(&time);
+	int lastTransmitSec = curTime.sec;
+	int lastPrintSec = curTime.sec;
+	rtc_set_datetime(&curTime);
 
 	// Start all sensors
 	SX1278->begin(LORA_FREQ);
 	GPS->begin(i2cOne);
 	PressureSensor->begin(i2cOne);
+	// SD->begin();
 
 	printf("Starting Health Check...\n");
 
@@ -196,6 +199,7 @@ int main()
 	// PressureSensor->printPROM();
 
 	int counter = 0;
+	int testTimer = 0;
 
 	// Launch Second Core
 	printf("Launching Core 2...\n");
@@ -205,9 +209,9 @@ int main()
 	for (EVER)
 	{
 		// Check time
-		rtc_get_datetime(&time);
-		int dispatchDifference = abs(time.sec - lastTransmitSec);
-		int printDifference = abs(time.sec - lastPrintSec);
+		rtc_get_datetime(&curTime);
+		int dispatchDifference = abs(curTime.sec - lastTransmitSec);
+		int printDifference = abs(curTime.sec - lastPrintSec);
 
 		// Sensor Reads
 
@@ -225,11 +229,11 @@ int main()
 		if (dispatchDifference >= MSG_SEND_INTERVAL_SEC)
 		{
 			commandHandler->addCommand(REGULAR_TRANSMISSION);
-			lastTransmitSec = time.sec;
+			lastTransmitSec = curTime.sec;
 		}
 
 		// Activate cutdown sensor when duration achieved
-		if (time.hour >= CUTDOWN_TIME_HOURS)
+		if (curTime.hour >= CUTDOWN_TIME_HOURS)
 		{
 			commandHandler->addCommand(CUTDOWN);
 		}
@@ -250,7 +254,8 @@ int main()
 
 			// Print out Data
 			printf("\n");
-			// printf("******************************\n");
+			testTimer++;
+			printf("******************************\n");
 			GPS->printLat();
 			GPS->printLon();
 			GPS->printAlt();
@@ -260,12 +265,14 @@ int main()
 			PressureSensor->printAlt();
 			Thermistor->printTemp();
 			printf("Messages sent: %d\n", SX1278->msgCount);
-			printf("Hour: %d, Min: %d, Sec: %d\n", time.hour, time.min, time.sec);
+			printf("Hour: %d, Min: %d, Sec: %d\n", curTime.hour, curTime.min, curTime.sec);
 			printf("Loop done %d\n", counter);
 			printf("Watchdog reset\n");
 
 			printf("******************************\n");
-			lastPrintSec = time.sec;
+			lastPrintSec = curTime.sec;
+			// std::string test = "";
+			//  SD->write(&test);
 			printf("\n");
 		}
 	}

@@ -241,4 +241,12 @@ CMakeFiles/Balloon.dir/balloon.cpp.obj: \
  /Users/josephloftin/pico/Balloon/include/Print.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/inttypes.h \
  /Users/josephloftin/pico/Balloon/include/CommandHandler.h \
- /Users/josephloftin/pico/Balloon/include/./LimitedQueue.h
+ /Users/josephloftin/pico/Balloon/include/./LimitedQueue.h \
+ /Users/josephloftin/pico/Balloon/include/SDCard.h \
+ /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.h \
+ /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.h \
+ /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffconf.h \
+ /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.h \
+ /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
+ /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
+ /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h

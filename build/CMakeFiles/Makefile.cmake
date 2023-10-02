@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.25.2/CMakeSystem.cmake"
   "elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/CMakeLists.txt"
   "/Users/josephloftin/pico/Balloon/pico_sdk_import.cmake"
   "/Users/josephloftin/pico/pico-sdk/CMakeLists.txt"
   "/Users/josephloftin/pico/pico-sdk/cmake/Platform/PICO.cmake"
@@ -239,6 +240,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2040/hardware_regs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2040/hardware_structs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "build/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -252,6 +254,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Thermistor.dir/DependInfo.cmake"
   "CMakeFiles/CommandHandler.dir/DependInfo.cmake"
   "CMakeFiles/i2cDevice.dir/DependInfo.cmake"
+  "CMakeFiles/SDCard.dir/DependInfo.cmake"
   "CMakeFiles/ELF2UF2Build.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake"

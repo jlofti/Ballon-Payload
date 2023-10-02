@@ -234,6 +234,19 @@ i2cDevice/fast:
 .PHONY : i2cDevice/fast
 
 #=============================================================================
+# Target rules for targets named SDCard
+
+# Build rule for target.
+SDCard: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDCard
+.PHONY : SDCard
+
+# fast build rule for target.
+SDCard/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/build
+.PHONY : SDCard/fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -756,6 +769,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -771,6 +785,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -786,6 +801,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -801,6 +817,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -816,6 +833,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -831,6 +849,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -846,6 +865,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -861,6 +881,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -876,6 +897,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -891,6 +913,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -906,6 +929,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -921,6 +945,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -936,6 +961,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.i: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -951,6 +977,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.s: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -966,6 +993,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -981,6 +1009,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.i: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -996,6 +1025,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.s: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -1011,6 +1041,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -1026,6 +1057,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -1041,6 +1073,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -1056,6 +1089,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -1071,6 +1105,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -1086,6 +1121,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -1101,6 +1137,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -1116,6 +1153,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -1131,6 +1169,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -1146,6 +1185,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
@@ -1188,6 +1228,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -1203,6 +1244,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -1218,6 +1260,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -1232,6 +1275,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -1246,6 +1290,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -1260,6 +1305,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -1273,7 +1319,35 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+
+# target to build an object file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
@@ -1311,6 +1385,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1325,6 +1400,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1339,6 +1415,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
@@ -1387,6 +1464,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1402,6 +1480,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1417,6 +1496,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1432,6 +1512,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1446,6 +1527,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1460,6 +1542,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1474,6 +1557,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
@@ -1482,6 +1566,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: Users/jose
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
@@ -1490,6 +1575,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: Users/joseph
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
@@ -1498,6 +1584,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: Users/joseph
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
@@ -1508,6 +1595,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1518,6 +1606,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1528,6 +1617,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1543,6 +1633,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1558,6 +1649,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1573,6 +1665,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1588,6 +1681,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1603,6 +1697,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1618,6 +1713,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1631,6 +1727,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1644,6 +1741,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1657,6 +1755,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1671,6 +1770,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1685,6 +1785,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1699,6 +1800,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1713,6 +1815,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1727,6 +1830,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1741,6 +1845,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1755,6 +1860,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1769,6 +1875,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1783,6 +1890,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1796,6 +1904,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1809,6 +1918,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1822,6 +1932,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1835,6 +1946,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1848,6 +1960,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1861,6 +1974,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1874,6 +1988,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.ob
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1887,6 +2002,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1900,6 +2016,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1913,6 +2030,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1926,6 +2044,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1939,6 +2058,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1952,6 +2072,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1989,6 +2110,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -2002,6 +2124,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -2015,6 +2138,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -2028,6 +2152,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -2041,6 +2166,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -2054,6 +2180,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -2067,6 +2194,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -2080,6 +2208,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -2093,6 +2222,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_ae
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -2106,6 +2236,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -2119,6 +2250,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -2132,6 +2264,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -2145,6 +2278,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
@@ -2184,6 +2318,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -2199,6 +2334,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -2214,6 +2350,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -2227,6 +2364,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -2240,6 +2378,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -2253,6 +2392,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -2266,6 +2406,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -2279,6 +2420,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -2292,6 +2434,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -2305,6 +2448,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -2318,6 +2462,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -2331,6 +2476,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2344,6 +2490,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -2357,6 +2504,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -2370,6 +2518,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -2383,6 +2532,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -2396,6 +2546,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -2409,6 +2560,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -2422,6 +2574,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -2434,6 +2587,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -2446,6 +2600,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -2458,6 +2613,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -2543,6 +2699,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -2556,6 +2713,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -2569,6 +2727,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -2618,6 +2777,357 @@ balloon.s: balloon.cpp.s
 balloon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/balloon.cpp.s
 .PHONY : balloon.cpp.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj
+
+# target to build an object file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i
+
+# target to preprocess a source file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s: include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s
+
+# target to generate assembly for a file
+include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
+.PHONY : include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
 
 src/CommandHandler.obj: src/CommandHandler.cpp.obj
 .PHONY : src/CommandHandler.obj
@@ -2763,6 +3273,30 @@ src/Print.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_print.dir/build.make CMakeFiles/LoRa_print.dir/src/Print.cpp.s
 .PHONY : src/Print.cpp.s
 
+src/SDCard.obj: src/SDCard.cpp.obj
+.PHONY : src/SDCard.obj
+
+# target to build an object file
+src/SDCard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/src/SDCard.cpp.obj
+.PHONY : src/SDCard.cpp.obj
+
+src/SDCard.i: src/SDCard.cpp.i
+.PHONY : src/SDCard.i
+
+# target to preprocess a source file
+src/SDCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/src/SDCard.cpp.i
+.PHONY : src/SDCard.cpp.i
+
+src/SDCard.s: src/SDCard.cpp.s
+.PHONY : src/SDCard.s
+
+# target to generate assembly for a file
+src/SDCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/src/SDCard.cpp.s
+.PHONY : src/SDCard.cpp.s
+
 src/Thermistor.obj: src/Thermistor.cpp.obj
 .PHONY : src/Thermistor.obj
 
@@ -2831,6 +3365,7 @@ help:
 	@echo "... LoRa_pico_lib"
 	@echo "... LoRa_print"
 	@echo "... Pressure"
+	@echo "... SDCard"
 	@echo "... Thermistor"
 	@echo "... bs2_default"
 	@echo "... i2cDevice"
@@ -2925,6 +3460,9 @@ help:
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s"
@@ -3037,6 +3575,45 @@ help:
 	@echo "... balloon.obj"
 	@echo "... balloon.i"
 	@echo "... balloon.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i"
+	@echo "... include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s"
 	@echo "... src/CommandHandler.obj"
 	@echo "... src/CommandHandler.i"
 	@echo "... src/CommandHandler.s"
@@ -3055,6 +3632,9 @@ help:
 	@echo "... src/Print.obj"
 	@echo "... src/Print.i"
 	@echo "... src/Print.s"
+	@echo "... src/SDCard.obj"
+	@echo "... src/SDCard.i"
+	@echo "... src/SDCard.s"
 	@echo "... src/Thermistor.obj"
 	@echo "... src/Thermistor.i"
 	@echo "... src/Thermistor.s"

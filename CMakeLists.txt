@@ -20,6 +20,7 @@ add_library(Pressure include/Pressure.h src/Pressure.cpp)
 add_library(Thermistor include/Thermistor.h src/Thermistor.cpp)
 add_library(CommandHandler include/CommandHandler.h src/CommandHandler.cpp)
 add_library(i2cDevice include/i2cDevice.h src/i2cDevice.cpp)
+add_library(SDCard include/SDCard.h src/SDCard.cpp)
 
 
 target_link_libraries(LoRa_pico_lib pico_stdlib hardware_spi hardware_gpio)
@@ -29,6 +30,9 @@ target_link_libraries(Pressure hardware_i2c pico_stdlib i2cDevice)
 target_link_libraries(i2cDevice hardware_i2c)
 target_link_libraries(Thermistor hardware_adc pico_stdlib hardware_gpio)
 target_link_libraries(CommandHandler pico_sync)
+target_link_libraries(SDCard FatFs_SPI)
+
+add_subdirectory(include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
 
 target_link_libraries(Balloon 
 	pico_multicore
@@ -47,6 +51,8 @@ target_link_libraries(Balloon
 	LoRa	
 	pico_sync
 	CommandHandler
+	SDCard
+	FatFs_SPI
 )
 
 pico_enable_stdio_usb(Balloon 1)

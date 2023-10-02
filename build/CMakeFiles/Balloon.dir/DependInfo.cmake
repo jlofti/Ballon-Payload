@@ -121,6 +121,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/include"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/include"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/include"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/include"
+  "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/include"
   )
 
 # The set of dependency files which are needed:
@@ -155,6 +159,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d"
+  "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d"
@@ -186,6 +191,19 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj.d"
+  "/Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj" "gcc" "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj.d"
   "/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   "/Users/josephloftin/pico/Balloon/balloon.cpp" "CMakeFiles/Balloon.dir/balloon.cpp.obj" "gcc" "CMakeFiles/Balloon.dir/balloon.cpp.obj.d"
   )
@@ -199,6 +217,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/Thermistor.dir/DependInfo.cmake"
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/LoRa.dir/DependInfo.cmake"
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/CommandHandler.dir/DependInfo.cmake"
+  "/Users/josephloftin/pico/Balloon/build/CMakeFiles/SDCard.dir/DependInfo.cmake"
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/i2cDevice.dir/DependInfo.cmake"
   )
 
