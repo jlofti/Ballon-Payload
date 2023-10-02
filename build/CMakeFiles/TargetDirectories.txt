@@ -6,6 +6,7 @@
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/Pressure.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/Thermistor.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/CommandHandler.dir
+/Users/josephloftin/pico/Balloon/build/CMakeFiles/i2cDevice.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/ELF2UF2Build.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/edit_cache.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/rebuild_cache.dir

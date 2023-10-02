@@ -34,29 +34,19 @@ bool GPS_t::begin(i2c_inst_t *i2c_)
 
 uint16_t GPS_t::getAvailableReadBytes()
 {
+    uint8_t msb;
+    uint8_t lsb;
 
-    // Write to MSB Reg to get available bytes
-    int written = i2c_write_blocking(i2c, GPS_ADDR, &MSB_AVAILABLE_REG, 1, true);
+    // Read two regs to get available bytes at GPS buffer register
+    this->regRead(i2c, GPS_ADDR, MSB_AVAILABLE_REG, &msb, 1);
+    this->regRead(i2c, GPS_ADDR, LSB_AVAILABLE_REG, &lsb, 1);
 
-    if (written == 1)
-    {
-        uint8_t msb;
-        uint8_t lsb;
-        uint16_t availableBytes;
-        i2c_read_blocking(i2c, GPS_ADDR, &msb, 1, true);
-        i2c_read_blocking(i2c, GPS_ADDR, &lsb, 1, false);
+    uint16_t availableReadBytes = (msb << 8) | lsb;
 
-        availableBytes = (msb << 8) | lsb;
-        return availableBytes;
-    }
-
-    else
-    {
-        return 0;
-    }
+    return availableReadBytes;
 }
 
-uint16_t GPS_t::readI2CGPS(uint16_t availableBytes)
+uint16_t GPS_t::readGPS(uint8_t *buf, uint16_t availableBytes)
 {
 
     // Nothing to read, dont do anything
@@ -65,58 +55,120 @@ uint16_t GPS_t::readI2CGPS(uint16_t availableBytes)
         return 0;
     }
 
-    else
+    uint16_t bytesRead = 0;
+    bytesRead += i2c_read_blocking(i2c, GPS_ADDR, buf, availableBytes, false);
+
+    return bytesRead;
+}
+
+void GPS_t::setData(uint8_t *data, uint16_t len)
+{
+    std::string sentence = "";
+
+    if (this->extractGNGGA(data, len, &sentence))
     {
-        this->data = "";
-        uint16_t bytesRead = 0;
-        bool nostop = true;
-        uint8_t c;
-
-        // Read bytes
-        for (int i = 0; i < availableBytes; i++)
-        {
-
-            if (i == availableBytes - 1)
-            {
-                nostop = false;
-            }
-
-            bytesRead += i2c_read_blocking(i2c, GPS_ADDR, &c, 1, nostop);
-            this->data.push_back(c);
-        }
-        return bytesRead;
+        this->setAndExtractGNGGAFields(&sentence);
     }
 }
 
-void GPS_t::printBuff()
-
+bool GPS_t::extractGNGGA(uint8_t *data_, uint16_t len_, std::string *sentence_)
 {
-
-    // If empty data, dont print anything
-    if (this->data.compare("") == 0)
+    // Nothing actually got read
+    if (len_ == 0)
     {
-        return;
+        return 0;
     }
 
-    // Extrat the GNGGA sentence
+    // Convert to string for easy manipulation
+    std::string converted = "";
+    for (int i = 0; i < len_; i++)
+    {
+        converted.push_back(static_cast<char>(data_[i]));
+    }
+
+    // Extract gngga sentence
     std::string begin = "$GNGGA";
     std::string end = "\r\n";
+    int beginIndex = converted.find(begin);
 
-    // std::string buff = (char *)dataBuff;
-
-    int beginIndex = this->data.find(begin);
+    // If theres no GNGGA, don't do anything
+    if (beginIndex == std::string::npos)
+    {
+        return 0;
+    }
 
     int endIndex = -1;
     int pos = 0;
 
+    // Find the end of the gngga line
     while (endIndex < beginIndex)
     {
-        endIndex = this->data.find(end, pos);
+        endIndex = converted.find(end, pos);
         pos += 1;
+
+        if (endIndex == std::string::npos)
+        {
+            return 0;
+        }
     }
 
-    std::string msg = this->data.substr(beginIndex, endIndex - beginIndex);
+    // Extract
+    converted = converted.substr(beginIndex, endIndex - beginIndex);
 
-    // Print the GNGGA sentence
-    printf("%s\n", msg.c_str());
+    sentence_->append(converted);
+    return 1;
 }
+
+void GPS_t::setAndExtractGNGGAFields(std::string *sentence_)
+{
+
+    // Fields are between each ,
+    size_t pos = 0;
+    uint8_t count = 0;
+    std::string delim = ",";
+    std::string fields[15];
+
+    while ((pos = sentence_->find(delim)) != std::string::npos)
+    {
+        std::string field = sentence_->substr(0, pos);
+        fields[count] = field;
+        sentence_->erase(0, pos + delim.length());
+        count++;
+    }
+
+    // Set all fields
+    this->time = std::stof(fields[TIME_FIELD]);
+    this->lat = std::stof(fields[LAT_FIELD]) / 100.0;
+
+    if (fields[LAT_NS_FIELD].compare("S") == 0)
+    {
+        this->lat *= -1;
+    }
+
+    this->lon = std::stof(fields[LON_FIELD]) / 100.0;
+
+    if (fields[LON_EW_FIELD].compare("W") == 0)
+    {
+        this->lon *= -1;
+    }
+
+    this->alt = std::stof(fields[ALT_FIELD]);
+
+    return;
+}
+void GPS_t::printLat()
+{
+    printf("Latitude is %f\n", this->lat);
+};
+void GPS_t::printLon()
+{
+    printf("Longitude is %f\n", this->lon);
+};
+void GPS_t::printAlt()
+{
+    printf("Altitude is %f\n", this->alt);
+};
+void GPS_t::printTime()
+{
+    printf("Time is %f\n", this->time);
+};

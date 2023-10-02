@@ -56,19 +56,19 @@ std::string CommandHandler_t::createDispatch(sid_t cmd_, uint8_t param_)
     switch (cmd_)
     {
     case PING:
-        printf("Ping Dispatch");
+        printf("Ping Dispatch Added");
         snprintf(dispatch, 30, "I'm alive");
         break;
     case CUTDOWN:
-        printf("Cutdown Dispatch");
+        printf("Cutdown Dispatch Added");
         snprintf(dispatch, 30, "Cutdown command");
         break;
     case DATA:
-        printf("Data Dispatch");
+        printf("Data Dispatch Added");
         snprintf(dispatch, 30, "heres data");
         break;
     case REGULAR:
-        printf("Regular Dispatch");
+        printf("Regular Dispatch Added");
         snprintf(dispatch, 30, "I'm data");
         break;
 
@@ -76,7 +76,7 @@ std::string CommandHandler_t::createDispatch(sid_t cmd_, uint8_t param_)
         break;
 
     case ACKSEND:
-        printf("Ack dispatch");
+        printf("Ack dispatch Added");
         snprintf(dispatch, 30, "ack: %d", param_);
         break;
     default:
@@ -94,7 +94,7 @@ void CommandHandler_t::executeCommand(uint32_t cmd_)
     sid_t sid = this->getSid(cmd_);
     uint8_t param = this->getParam(cmd_);
 
-        switch (sid)
+    switch (sid)
     {
     case PING:
         this->addDispatch(this->createDispatch(sid, param));

@@ -1,19 +1,42 @@
 #include "hardware/i2c.h"
 #include <stdio.h>
 #include <string>
+#include "./i2cDevice.h"
 
-static const uint8_t MSB_AVAILABLE_REG = 0xFD;
-static const uint8_t LSB_AVAILABLE_REG = 0xFE;
-static const uint8_t DATA_BUFFER_REG = 0xFF;
+static uint8_t MSB_AVAILABLE_REG = 0xFD;
+static uint8_t LSB_AVAILABLE_REG = 0xFE;
+static uint8_t DATA_BUFFER_REG = 0xFF;
+static uint8_t GPS_ADDR = 0x42;
 #define GPS_ADDR 0x42
 
-class GPS_t
+#define IDENTIFIER_FIELD 0
+#define TIME_FIELD 1
+#define LAT_FIELD 2
+#define LAT_NS_FIELD 3
+#define LON_FIELD 4
+#define LON_EW_FIELD 5
+#define QUALITY_FIELD 6
+#define SAT_FIELD 7
+#define HDOP_FIELD 8
+#define ALT_FIELD 9
+#define ALT_UNIT_FIELD 10
+#define GEOD_FIELD 11
+#define GEOD_UNIT_FIELD 12
+#define DGPS_FIELD 13
+#define CHECKSUM 14
+
+class GPS_t : i2cDevice
 {
 
 public:
     i2c_inst_t *i2c;
     std::string data = "";
     bool connected = false;
+
+    float time;
+    float lat;
+    float lon;
+    float alt;
 
     GPS_t();
     GPS_t(i2c_inst_t *i2c_);
@@ -38,11 +61,16 @@ public:
      *
      * @return Number of bytes successfully read
      */
-    uint16_t readI2CGPS(uint16_t availableBytes);
+    uint16_t readGPS(uint8_t *buf, uint16_t availableBytes);
 
-    /*
-     * Prints out the GNGGA message in the data buffer
-     *
-     */
-    void printBuff();
+    void setData(uint8_t *data, uint16_t len);
+
+    bool extractGNGGA(uint8_t *data_, uint16_t len_, std::string *sentence_);
+
+    void setAndExtractGNGGAFields(std::string *sentence_);
+
+    void printLat();
+    void printLon();
+    void printAlt();
+    void printTime();
 };

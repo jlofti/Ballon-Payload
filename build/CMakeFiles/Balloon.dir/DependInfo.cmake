@@ -199,6 +199,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/Thermistor.dir/DependInfo.cmake"
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/LoRa.dir/DependInfo.cmake"
   "/Users/josephloftin/pico/Balloon/build/CMakeFiles/CommandHandler.dir/DependInfo.cmake"
+  "/Users/josephloftin/pico/Balloon/build/CMakeFiles/i2cDevice.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

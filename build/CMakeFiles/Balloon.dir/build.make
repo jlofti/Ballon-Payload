@@ -1256,6 +1256,7 @@ Balloon.elf: libPressure.a
 Balloon.elf: libThermistor.a
 Balloon.elf: libLoRa.a
 Balloon.elf: libCommandHandler.a
+Balloon.elf: libi2cDevice.a
 Balloon.elf: libLoRa_pico_lib.a
 Balloon.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 Balloon.elf: CMakeFiles/Balloon.dir/link.txt

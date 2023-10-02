@@ -3417,11 +3417,8 @@ CMakeFiles/Balloon.dir/balloon.cpp.obj
  /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/watchdog.h
  /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/watchdog.h
  /Users/josephloftin/pico/Balloon/include/GPS.h
+ /Users/josephloftin/pico/Balloon/include/i2cDevice.h
  /Users/josephloftin/pico/Balloon/include/Pressure.h
- /Users/josephloftin/pico/Balloon/include/Thermistor.h
- /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
- /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
- /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/c++/10.3.1/math.h
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/c++/10.3.1/cmath
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/math.h
@@ -3439,6 +3436,10 @@ CMakeFiles/Balloon.dir/balloon.cpp.obj
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/c++/10.3.1/tr1/poly_hermite.tcc
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/c++/10.3.1/tr1/poly_laguerre.tcc
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/c++/10.3.1/tr1/riemann_zeta.tcc
+ /Users/josephloftin/pico/Balloon/include/Thermistor.h
+ /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/include/hardware/adc.h
+ /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h
+ /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h
  /Users/josephloftin/pico/Balloon/include/LoRa.h
  /Users/josephloftin/pico/Balloon/include/LoRa-RP2040.h
  /Users/josephloftin/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h

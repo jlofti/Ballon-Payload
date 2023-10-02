@@ -19,7 +19,6 @@
 #include "include/Pressure.h"
 #include "include/Thermistor.h"
 #include "include/LoRa.h"
-// #include "include/LimitedQueue.h"
 #include "include/CommandHandler.h"
 
 // Ports
@@ -37,12 +36,13 @@
 
 // Timing
 #define MSG_SEND_INTERVAL_SEC 5
+#define DEBUG_PRINT_INTERVAL 5
 #define POST_INIT_DELAY_MS 5000
 #define WATCHDOG_TIMEOUT_MS 10000
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
-#define DEBUG 0
+#define DEBUG 1
 #define EVER \
 	;        \
 	;
@@ -165,7 +165,7 @@ int main()
 	sleep_ms(POST_INIT_DELAY_MS);
 
 	int lastTransmitSec = time.sec;
-
+	int lastPrintSec = time.sec;
 	rtc_set_datetime(&time);
 
 	// Start all sensors
@@ -176,7 +176,7 @@ int main()
 	printf("Starting Health Check...\n");
 
 	// Health check
-	if (SX1278->connected && GPS->connected && PressureSensor->connected)
+	if (SX1278->connected && GPS->connected)
 	{
 
 		printf("Health check passed\n");
@@ -193,7 +193,7 @@ int main()
 
 	blinkGreen();
 
-	PressureSensor->printPROM();
+	// PressureSensor->printPROM();
 
 	int counter = 0;
 
@@ -206,15 +206,23 @@ int main()
 	{
 		// Check time
 		rtc_get_datetime(&time);
-		int difference = abs(time.sec - lastTransmitSec);
+		int dispatchDifference = abs(time.sec - lastTransmitSec);
+		int printDifference = abs(time.sec - lastPrintSec);
 
 		// Sensor Reads
-		PressureSensor->readTempPressure();
+
+		PressureSensor->setPressure(PressureSensor->readPressure());
+		PressureSensor->setTemp(PressureSensor->readTemp());
+		PressureSensor->setAlt(PressureSensor->readAlt());
 		Thermistor->readTemp();
-		GPS->readI2CGPS(GPS->getAvailableReadBytes());
+
+		uint16_t availableBytes = GPS->getAvailableReadBytes();
+		uint8_t GPSbuf[availableBytes];
+		availableBytes = GPS->readGPS(GPSbuf, availableBytes);
+		GPS->setData(GPSbuf, availableBytes);
 
 		// Check if enough time has elapsed for regular message pings
-		if (difference >= MSG_SEND_INTERVAL_SEC)
+		if (dispatchDifference >= MSG_SEND_INTERVAL_SEC)
 		{
 			commandHandler->addCommand(REGULAR_TRANSMISSION);
 			lastTransmitSec = time.sec;
@@ -237,15 +245,19 @@ int main()
 		counter++;
 
 		// Printing
-		if (DEBUG)
+		if (DEBUG && printDifference >= DEBUG_PRINT_INTERVAL)
 		{
 
 			// Print out Data
 			printf("\n");
-			printf("******************************\n");
-			GPS->printBuff();
+			// printf("******************************\n");
+			GPS->printLat();
+			GPS->printLon();
+			GPS->printAlt();
+			GPS->printTime();
 			PressureSensor->printTemp();
 			PressureSensor->printPressure();
+			PressureSensor->printAlt();
 			Thermistor->printTemp();
 			printf("Messages sent: %d\n", SX1278->msgCount);
 			printf("Hour: %d, Min: %d, Sec: %d\n", time.hour, time.min, time.sec);
@@ -253,6 +265,7 @@ int main()
 			printf("Watchdog reset\n");
 
 			printf("******************************\n");
+			lastPrintSec = time.sec;
 			printf("\n");
 		}
 	}

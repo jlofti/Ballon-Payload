@@ -221,6 +221,19 @@ CommandHandler/fast:
 .PHONY : CommandHandler/fast
 
 #=============================================================================
+# Target rules for targets named i2cDevice
+
+# Build rule for target.
+i2cDevice: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 i2cDevice
+.PHONY : i2cDevice
+
+# fast build rule for target.
+i2cDevice/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/build
+.PHONY : i2cDevice/fast
+
+#=============================================================================
 # Target rules for targets named ELF2UF2Build
 
 # Build rule for target.
@@ -742,6 +755,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -756,6 +770,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -770,6 +785,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -784,6 +800,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -798,6 +815,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -812,6 +830,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -826,6 +845,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -840,6 +860,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -854,6 +875,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -868,6 +890,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.i: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -882,6 +905,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.s: Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -896,6 +920,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -910,6 +935,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.i: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -924,6 +950,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.s: Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -938,6 +965,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -952,6 +980,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.i: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -966,6 +995,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.s: Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -980,6 +1010,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -994,6 +1025,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -1008,6 +1040,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -1022,6 +1055,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -1036,6 +1070,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -1050,6 +1085,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -1064,6 +1100,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.obj: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -1078,6 +1115,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.i: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -1092,6 +1130,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.s: Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -1106,6 +1145,7 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
@@ -1147,6 +1187,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -1161,6 +1202,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -1175,6 +1217,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -1188,6 +1231,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -1201,6 +1245,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -1214,6 +1259,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -1264,6 +1310,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1277,6 +1324,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1290,6 +1338,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
@@ -1300,6 +1349,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
@@ -1310,6 +1360,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
@@ -1320,6 +1371,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1334,6 +1386,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1348,6 +1401,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1362,6 +1416,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1376,6 +1431,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1389,6 +1445,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1402,6 +1459,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1415,6 +1473,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
@@ -1483,6 +1542,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1497,6 +1557,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1511,6 +1572,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1525,6 +1587,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1539,6 +1602,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1553,6 +1617,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1605,6 +1670,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1618,6 +1684,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1631,6 +1698,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1644,6 +1712,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1657,6 +1726,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1670,6 +1740,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1683,6 +1754,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1696,6 +1768,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1709,6 +1782,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -2109,6 +2183,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -2123,6 +2198,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -2137,6 +2213,7 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CommandHandler.dir/build.make CMakeFiles/CommandHandler.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -2710,6 +2787,30 @@ src/Thermistor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Thermistor.dir/build.make CMakeFiles/Thermistor.dir/src/Thermistor.cpp.s
 .PHONY : src/Thermistor.cpp.s
 
+src/i2cDevice.obj: src/i2cDevice.cpp.obj
+.PHONY : src/i2cDevice.obj
+
+# target to build an object file
+src/i2cDevice.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/src/i2cDevice.cpp.obj
+.PHONY : src/i2cDevice.cpp.obj
+
+src/i2cDevice.i: src/i2cDevice.cpp.i
+.PHONY : src/i2cDevice.i
+
+# target to preprocess a source file
+src/i2cDevice.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/src/i2cDevice.cpp.i
+.PHONY : src/i2cDevice.cpp.i
+
+src/i2cDevice.s: src/i2cDevice.cpp.s
+.PHONY : src/i2cDevice.s
+
+# target to generate assembly for a file
+src/i2cDevice.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/src/i2cDevice.cpp.s
+.PHONY : src/i2cDevice.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2732,6 +2833,7 @@ help:
 	@echo "... Pressure"
 	@echo "... Thermistor"
 	@echo "... bs2_default"
+	@echo "... i2cDevice"
 	@echo "... Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2956,6 +3058,9 @@ help:
 	@echo "... src/Thermistor.obj"
 	@echo "... src/Thermistor.i"
 	@echo "... src/Thermistor.s"
+	@echo "... src/i2cDevice.obj"
+	@echo "... src/i2cDevice.i"
+	@echo "... src/i2cDevice.s"
 .PHONY : help
 
 

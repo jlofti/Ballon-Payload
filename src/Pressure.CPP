@@ -20,9 +20,6 @@ bool PressureSensor_t::begin(i2c_inst_t *i2c_)
         {
             printf("Pressure Sensor found\n");
 
-            // Perform reset and PROM read
-            reset();
-            readPROM();
             connected = true;
             return true;
         }
@@ -35,119 +32,94 @@ bool PressureSensor_t::begin(i2c_inst_t *i2c_)
     return false;
 }
 
-uint8_t PressureSensor_t::reset()
+float PressureSensor_t::readPressure()
 {
-    // Reset command before run
-    return i2c_write_blocking(i2c, PRESSURE_ADDR, &PRESSURE_RESET, 1, false);
+    float p;
+    uint8_t presH;
+    uint8_t presL;
+    uint8_t presXL;
+
+    // Start one shot and wait till ready
+    this->startOneShot();
+
+    // Read 3 pressure regs
+    this->regRead(i2c, PRESSURE_ADDR, PRES_XL_REG, &presXL, 1);
+    this->regRead(i2c, PRESSURE_ADDR, PRES_L_REG, &presL, 1);
+    this->regRead(i2c, PRESSURE_ADDR, PRES_H_REG, &presH, 1);
+
+    // Convert
+    p = ((static_cast<uint32_t>(presH << 16)) | static_cast<uint32_t>(presL << 8) | presXL);
+    p = (p / 4096.0);
+
+    return p;
 }
-uint8_t PressureSensor_t::readPROM()
+
+void PressureSensor_t::startOneShot()
 {
-    // Start at this command and increase by 2 to read each PROM value
-    uint8_t PROM_CMD = 0xA0;
-    uint8_t bytesRead = 0;
-    for (int i = 0; i < 8; i++)
+    // Initiate one shot of pressure
+
+    this->regWrite(i2c, PRESSURE_ADDR, CTRL2_REG, &ONE_SHOT, 1);
+    uint8_t oneShotStatus;
+
+    // Wait till bit 0 in ctrl2 register clears
+    do
     {
-        uint8_t buffer[2];
-        buffer[0] = 0;
-        buffer[1] = 0;
-        i2c_write_blocking(i2c, PRESSURE_ADDR, &PROM_CMD, 1, false);
-        sleep_ms(100);
-        bytesRead += i2c_read_blocking(i2c, PRESSURE_ADDR, &buffer[0], 1, false);
-        bytesRead += i2c_read_blocking(i2c, PRESSURE_ADDR, &buffer[1], 1, false);
-
-        PROMBuff[i] = (buffer[0] << 8) | buffer[1];
-        PROM_CMD += 2;
-    }
-
-    return bytesRead;
+        this->regRead(i2c, PRESSURE_ADDR, CTRL2_REG, &oneShotStatus, 1);
+        oneShotStatus = oneShotStatus & 0x01;
+    } while (oneShotStatus != 0);
 }
 
-uint8_t PressureSensor_t::readTempPressure()
-
+float PressureSensor_t::readTemp()
 {
-    uint8_t written = 0;
+    uint8_t tempH;
+    uint8_t tempL;
+    float temp;
 
-    // Set coeffs
-    uint16_t C1 = PROMBuff[0];
-    uint16_t C2 = PROMBuff[1];
-    uint16_t C3 = PROMBuff[2];
-    uint16_t C4 = PROMBuff[3];
-    uint16_t C5 = PROMBuff[4];
-    uint16_t C6 = PROMBuff[5];
+    // Initiate temp measurement
+    this->startOneShot();
 
-    // Begin Pressure Conversion
-    written += i2c_write_blocking(i2c, PRESSURE_ADDR, &CONVERT_PRESSURE, 1, false);
-    sleep_ms(100);
-    written += i2c_write_blocking(i2c, PRESSURE_ADDR, &ADC_READ, 1, false);
-    sleep_ms(100);
+    // Read two temp regs
+    this->regRead(i2c, PRESSURE_ADDR, TEMP_L_REG, &tempL, 1);
+    this->regRead(i2c, PRESSURE_ADDR, TEMP_H_REG, &tempH, 1);
 
-    // printf("Pressure Bytes Written: %d\n", written);
-
-    uint8_t pressureBuff[3];
-    uint8_t tempBuff[3];
-
-    // Read Pressure
-    i2c_read_blocking(i2c, PRESSURE_ADDR, pressureBuff, 3, false);
-
-    // Begin Temp Conversion
-    written += i2c_write_blocking(i2c, PRESSURE_ADDR, &CONVERT_TEMP, 1, false);
-    sleep_ms(100);
-    written += i2c_write_blocking(i2c, PRESSURE_ADDR, &ADC_READ, 1, false);
-    sleep_ms(100);
-
-    // printf("Temp Bytes Written: %d\n", written);
-
-    i2c_read_blocking(i2c, PRESSURE_ADDR, tempBuff, 3, false);
-
-    // Math
-    unsigned int D1 = ((pressureBuff[0] << 16) | (pressureBuff[1] << 8) | (pressureBuff[2]));
-    unsigned int D2 = ((tempBuff[0] << 16) | (tempBuff[1] << 8) | (tempBuff[2]));
-
-    // printf("Read D1: %d\n", D1);
-    // printf("Read D2: %d\n", D2);
-
-    // Math
-    signed int dT = D2 - C5 * (1 << 8);
-    signed int TEMP = 2000 + dT * C6 / (1 << 23);
-
-    // printf("Read dT: %d\n", dT);
-
-    // Math
-    long OFF = C2 * (1 << 17) + (C4 * dT) / (1 << 6);
-    long SENS = C1 * (1 << 16) + (C3 * dT) / (1 << 7);
-
-    // printf("Read OFF: %d\n", OFF);
-    // printf("Read SENS: %d\n", SENS);
-
-    // Math
-    signed int P = (D1 * SENS / (1 << 21) - OFF) / (1 << 15);
-
-    // printf("Temp: %d\n", TEMP);
-    // printf("Pressure %d\n", P);
-
-    temp = TEMP;
-    pressure = P;
-
-    return written;
+    // Convert
+    temp = (static_cast<uint16_t>(tempH << 8)) | tempL;
+    temp = temp / 100.0;
+    return temp;
 }
 
-void PressureSensor_t::printTemp()
+float PressureSensor_t::readAlt()
 {
-    // Prin the temperature in celcius
-    printf("Sensor temp is: %5.2f C\n", (float)temp / 100);
+    float alt = 44330.0 * (1.0 - pow(this->pressure / PRES_SEA_HPA, (1.0 / 5.255)));
+    return alt;
+}
+
+void PressureSensor_t::setPressure(float p)
+{
+    this->pressure = p;
+}
+
+void PressureSensor_t::setTemp(float t)
+{
+    this->temp = t;
+}
+
+void PressureSensor_t::setAlt(float a)
+{
+    this->alt = a;
 }
 
 void PressureSensor_t::printPressure()
 {
-    // Print the pressure in mbar
-    printf("Sensor pressure is: %5.2f mBar\n", (float)pressure / 100);
+    printf("Pressure Sensor Pressure: %f mBar\n", this->pressure);
 }
 
-void PressureSensor_t::printPROM()
+void PressureSensor_t::printTemp()
 {
-    // Print each PROM value
-    for (int i = 0; i < 8; i++)
-    {
-        printf("PROM Value: %d\n", PROMBuff[i]);
-    }
+    printf("Pressure Sensor temp: %f celcius\n", this->temp);
+}
+
+void PressureSensor_t::printAlt()
+{
+    printf("Pressure Sensor altitude: %f meters\n", this->alt);
 }
