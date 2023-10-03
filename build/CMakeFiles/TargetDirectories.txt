@@ -1,6 +1,4 @@
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/Balloon.dir
-/Users/josephloftin/pico/Balloon/build/CMakeFiles/LoRa_pico_lib.dir
-/Users/josephloftin/pico/Balloon/build/CMakeFiles/LoRa_print.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/LoRa.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/GPS.dir
 /Users/josephloftin/pico/Balloon/build/CMakeFiles/Pressure.dir
@@ -174,5 +172,13 @@
 /Users/josephloftin/pico/Balloon/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 /Users/josephloftin/pico/Balloon/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /Users/josephloftin/pico/Balloon/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
-/Users/josephloftin/pico/Balloon/build/build/CMakeFiles/edit_cache.dir
-/Users/josephloftin/pico/Balloon/build/build/CMakeFiles/rebuild_cache.dir
+/Users/josephloftin/pico/Balloon/build/spi_build/CMakeFiles/edit_cache.dir
+/Users/josephloftin/pico/Balloon/build/spi_build/CMakeFiles/rebuild_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/CMakeFiles/edit_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/CMakeFiles/rebuild_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/pico-sdk/CMakeFiles/edit_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/pico-sdk/CMakeFiles/rebuild_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/src/CMakeFiles/LoRa_pico_lib.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/src/CMakeFiles/LoRa_print.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/src/CMakeFiles/edit_cache.dir
+/Users/josephloftin/pico/Balloon/build/lora_build/src/CMakeFiles/rebuild_cache.dir

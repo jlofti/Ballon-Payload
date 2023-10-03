@@ -1080,10 +1080,24 @@ CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c -o CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 
+CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj: CMakeFiles/Balloon.dir/flags.make
+CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj: /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c
+CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj -MF CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj.d -o CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj -c /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c
+
+CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c > CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i
+
+CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c -o CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s
+
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj -MF CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj.d -o CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj -c /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c
 
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
@@ -1097,7 +1111,7 @@ CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i: cmake_force
@@ -1111,7 +1125,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff1
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i: cmake_force
@@ -1125,7 +1139,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff1
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i: cmake_force
@@ -1139,7 +1153,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff1
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i: cmake_force
@@ -1153,7 +1167,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i: cmake_force
@@ -1167,7 +1181,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i: cmake_force
@@ -1181,7 +1195,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i: cmake_force
@@ -1195,7 +1209,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i: cmake_force
@@ -1209,7 +1223,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i: cmake_force
@@ -1223,7 +1237,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i: cmake_force
@@ -1237,7 +1251,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i: cmake_force
@@ -1251,7 +1265,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i: cmake_force
@@ -1265,7 +1279,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj -MF CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj.d -o CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj -c /Users/josephloftin/pico/Balloon/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c
 
 CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i: cmake_force
@@ -1279,7 +1293,7 @@ CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: CMakeFiles/Balloon.dir/flags.make
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: CMakeFiles/Balloon.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj -MF CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj.d -o CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj -c /Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 
 CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
@@ -1365,6 +1379,7 @@ Balloon_OBJECTS = \
 "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" \
 "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
 "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj" \
+"CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj" \
 "CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj" \
 "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj" \
 "CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj" \
@@ -1457,6 +1472,7 @@ Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_com
 Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
@@ -1473,8 +1489,8 @@ Balloon.elf: CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/
 Balloon.elf: CMakeFiles/Balloon.dir/include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
 Balloon.elf: CMakeFiles/Balloon.dir/build.make
-Balloon.elf: libLoRa_pico_lib.a
-Balloon.elf: libLoRa_print.a
+Balloon.elf: lora_build/src/libLoRa_pico_lib.a
+Balloon.elf: lora_build/src/libLoRa_print.a
 Balloon.elf: libGPS.a
 Balloon.elf: libPressure.a
 Balloon.elf: libThermistor.a
@@ -1482,10 +1498,11 @@ Balloon.elf: libLoRa.a
 Balloon.elf: libCommandHandler.a
 Balloon.elf: libSDCard.a
 Balloon.elf: libi2cDevice.a
-Balloon.elf: libLoRa_pico_lib.a
+Balloon.elf: lora_build/src/libLoRa_pico_lib.a
+Balloon.elf: lora_build/src/libLoRa_print.a
 Balloon.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 Balloon.elf: CMakeFiles/Balloon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Linking CXX executable Balloon.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/josephloftin/pico/Balloon/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Linking CXX executable Balloon.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Balloon.dir/link.txt --verbose=$(VERBOSE)
 	/usr/local/bin/arm-none-eabi-objcopy -Oihex /Users/josephloftin/pico/Balloon/build/Balloon.elf Balloon.hex
 	/usr/local/bin/arm-none-eabi-objcopy -Obinary /Users/josephloftin/pico/Balloon/build/Balloon.elf Balloon.bin

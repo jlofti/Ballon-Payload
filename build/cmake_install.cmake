@@ -40,7 +40,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/josephloftin/pico/Balloon/build/pico-sdk/cmake_install.cmake")
-  include("/Users/josephloftin/pico/Balloon/build/build/cmake_install.cmake")
+  include("/Users/josephloftin/pico/Balloon/build/spi_build/cmake_install.cmake")
+  include("/Users/josephloftin/pico/Balloon/build/lora_build/cmake_install.cmake")
 
 endif()
 

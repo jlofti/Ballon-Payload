@@ -1,4 +1,4 @@
-#include "LoRa-RP2040.h"
+#include "./pico-lora/src/LoRa-RP2040.h"
 
 class LoRa_t
 {

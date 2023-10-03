@@ -233,12 +233,12 @@ CMakeFiles/Balloon.dir/balloon.cpp.obj: \
  /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/adc.h \
  /Users/josephloftin/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h \
  /Users/josephloftin/pico/Balloon/include/LoRa.h \
- /Users/josephloftin/pico/Balloon/include/LoRa-RP2040.h \
+ /Users/josephloftin/pico/Balloon/include/./pico-lora/src/LoRa-RP2040.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h \
- /Users/josephloftin/pico/Balloon/include/Print.h \
+ /Users/josephloftin/pico/Balloon/include/./pico-lora/src/Print.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/inttypes.h \
  /Users/josephloftin/pico/Balloon/include/CommandHandler.h \
  /Users/josephloftin/pico/Balloon/include/./LimitedQueue.h \

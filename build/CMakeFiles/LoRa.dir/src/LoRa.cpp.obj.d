@@ -1,7 +1,7 @@
 CMakeFiles/LoRa.dir/src/LoRa.cpp.obj: \
  /Users/josephloftin/pico/Balloon/src/LoRa.cpp \
  /Users/josephloftin/pico/Balloon/src/../include/LoRa.h \
- /Users/josephloftin/pico/Balloon/src/../include/LoRa-RP2040.h \
+ /Users/josephloftin/pico/Balloon/src/../include/./pico-lora/src/LoRa-RP2040.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /Users/josephloftin/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -74,7 +74,7 @@ CMakeFiles/LoRa.dir/src/LoRa.cpp.obj: \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_locale.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/strings.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/string.h \
- /Users/josephloftin/pico/Balloon/src/../include/Print.h \
+ /Users/josephloftin/pico/Balloon/src/../include/./pico-lora/src/Print.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/inttypes.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdio.h \
  /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \

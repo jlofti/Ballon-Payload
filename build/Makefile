@@ -130,32 +130,6 @@ Balloon/fast:
 .PHONY : Balloon/fast
 
 #=============================================================================
-# Target rules for targets named LoRa_pico_lib
-
-# Build rule for target.
-LoRa_pico_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoRa_pico_lib
-.PHONY : LoRa_pico_lib
-
-# fast build rule for target.
-LoRa_pico_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/build
-.PHONY : LoRa_pico_lib/fast
-
-#=============================================================================
-# Target rules for targets named LoRa_print
-
-# Build rule for target.
-LoRa_print: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoRa_print
-.PHONY : LoRa_print
-
-# fast build rule for target.
-LoRa_print/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_print.dir/build.make CMakeFiles/LoRa_print.dir/build
-.PHONY : LoRa_print/fast
-
-#=============================================================================
 # Target rules for targets named LoRa
 
 # Build rule for target.
@@ -323,6 +297,32 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h: cmake_check_build_system
 cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
+
+#=============================================================================
+# Target rules for targets named LoRa_pico_lib
+
+# Build rule for target.
+LoRa_pico_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoRa_pico_lib
+.PHONY : LoRa_pico_lib
+
+# fast build rule for target.
+LoRa_pico_lib/fast:
+	$(MAKE) $(MAKESILENT) -f lora_build/src/CMakeFiles/LoRa_pico_lib.dir/build.make lora_build/src/CMakeFiles/LoRa_pico_lib.dir/build
+.PHONY : LoRa_pico_lib/fast
+
+#=============================================================================
+# Target rules for targets named LoRa_print
+
+# Build rule for target.
+LoRa_print: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LoRa_print
+.PHONY : LoRa_print
+
+# fast build rule for target.
+LoRa_print/fast:
+	$(MAKE) $(MAKESILENT) -f lora_build/src/CMakeFiles/LoRa_print.dir/build.make lora_build/src/CMakeFiles/LoRa_print.dir/build
+.PHONY : LoRa_print/fast
 
 Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -762,7 +762,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.obj: User
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -778,7 +777,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.i: Users/
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -794,7 +792,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.s: Users/
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -810,7 +807,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.obj: Users/josep
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -826,7 +822,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.i: Users/josephl
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -842,7 +837,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.s: Users/josephl
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -858,7 +852,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.obj: Users/josephlof
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -874,7 +867,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.i: Users/josephlofti
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -890,7 +882,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.s: Users/josephlofti
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -906,7 +897,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.obj: Users/josephlofti
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -922,7 +912,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.i: Users/josephloftin/
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -938,7 +927,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.s: Users/josephloftin/
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -954,7 +942,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.obj: Users/josephloft
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -970,7 +957,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.i: Users/josephloftin
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -986,7 +972,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.s: Users/josephloftin
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -1002,7 +987,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -1018,7 +1002,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.i: Users/jo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -1034,7 +1017,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.s: Users/jo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -1050,7 +1032,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.obj: Users/joseph
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -1066,7 +1047,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.i: Users/josephlo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -1082,7 +1062,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.s: Users/josephlo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -1098,7 +1077,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.obj: Users/josephlof
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -1114,7 +1092,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.i: Users/josephlofti
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -1130,7 +1107,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.s: Users/josephlofti
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -1146,7 +1122,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.obj: Users/josephlof
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -1162,7 +1137,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.i: Users/josephlofti
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -1178,7 +1152,6 @@ Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.s: Users/josephlofti
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -1221,7 +1194,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -1237,7 +1209,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: Users/jo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -1253,7 +1224,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: Users/jo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -1269,7 +1239,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: User
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -1284,7 +1253,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -1299,7 +1267,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -1314,7 +1281,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Us
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -1379,7 +1345,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -1394,7 +1359,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1409,7 +1373,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1451,13 +1414,39 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/i2cDevice.dir/build.make CMakeFiles/i2cDevice.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.obj
+
+# target to build an object file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.obj
+
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.i: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.i
+
+# target to preprocess a source file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.i
+
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.s: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.s
+
+# target to generate assembly for a file
+Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s
+.PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.c.s
+
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj
 
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1473,7 +1462,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/joseph
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1489,7 +1477,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/joseph
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1505,7 +1492,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1521,7 +1507,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/jose
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1536,7 +1521,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/joseph
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1551,7 +1535,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/joseph
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1593,7 +1576,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: Users/jose
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
@@ -1604,7 +1586,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: Users/joseph
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1615,7 +1596,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: Users/joseph
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDCard.dir/build.make CMakeFiles/SDCard.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1626,7 +1606,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1642,7 +1621,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1658,7 +1636,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1674,7 +1651,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1690,7 +1666,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/jo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1706,7 +1681,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/jo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1722,7 +1696,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1736,7 +1709,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1750,7 +1722,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1764,7 +1735,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1779,7 +1749,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1794,7 +1763,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1809,7 +1777,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: 
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1824,7 +1791,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Us
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1839,7 +1805,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Us
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1854,7 +1819,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1869,7 +1833,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1884,7 +1847,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1899,7 +1861,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: 
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1913,7 +1874,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1927,7 +1887,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: Users/jo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1941,7 +1900,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: Users/jo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1955,7 +1913,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1969,7 +1926,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: Us
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1983,7 +1939,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj:
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1997,7 +1952,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: U
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -2011,7 +1965,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: U
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -2025,7 +1978,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: Use
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -2039,7 +1991,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: Users
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -2053,7 +2004,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: Users
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -2067,7 +2017,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.o
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -2105,7 +2054,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: User
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -2119,7 +2067,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: U
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -2133,7 +2080,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: Use
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -2147,7 +2093,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: Use
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -2161,7 +2106,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: Users
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -2175,7 +2119,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: Users/j
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -2189,7 +2132,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: Users/j
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -2203,7 +2145,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -2217,7 +2158,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_ae
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -2231,7 +2171,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: Use
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -2245,7 +2184,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: Users
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -2259,7 +2197,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: Users
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -2273,7 +2210,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: 
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -2311,7 +2247,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: User
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -2327,7 +2262,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: Users/
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -2343,7 +2277,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: Users/
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -2359,7 +2292,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -2373,7 +2305,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -2387,7 +2318,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -2401,7 +2331,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: Users/
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -2415,7 +2344,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: Users/jo
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -2429,7 +2357,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: Users/jo
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -2443,7 +2370,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.o
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -2457,7 +2383,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -2471,7 +2396,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -2485,7 +2409,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: Use
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2499,7 +2422,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.ob
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -2513,7 +2435,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i:
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -2527,7 +2448,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s:
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -2541,7 +2461,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: Users/jose
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -2555,7 +2474,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: Users/joseph
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -2569,7 +2487,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: Users/joseph
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -2582,7 +2499,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.obj: 
 
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
@@ -2595,7 +2511,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: Us
 
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
@@ -2608,7 +2523,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: Us
 
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
@@ -2694,7 +2608,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: Users/jo
 # target to build an object file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -2708,7 +2621,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: Users/jose
 # target to preprocess a source file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -2722,7 +2634,6 @@ Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: Users/jose
 # target to generate assembly for a file
 Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Balloon.dir/build.make CMakeFiles/Balloon.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa.dir/build.make CMakeFiles/LoRa.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/Users/josephloftin/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -3177,30 +3088,6 @@ src/GPS.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPS.dir/build.make CMakeFiles/GPS.dir/src/GPS.cpp.s
 .PHONY : src/GPS.cpp.s
 
-src/LoRa-RP2040.obj: src/LoRa-RP2040.cpp.obj
-.PHONY : src/LoRa-RP2040.obj
-
-# target to build an object file
-src/LoRa-RP2040.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/src/LoRa-RP2040.cpp.obj
-.PHONY : src/LoRa-RP2040.cpp.obj
-
-src/LoRa-RP2040.i: src/LoRa-RP2040.cpp.i
-.PHONY : src/LoRa-RP2040.i
-
-# target to preprocess a source file
-src/LoRa-RP2040.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/src/LoRa-RP2040.cpp.i
-.PHONY : src/LoRa-RP2040.cpp.i
-
-src/LoRa-RP2040.s: src/LoRa-RP2040.cpp.s
-.PHONY : src/LoRa-RP2040.s
-
-# target to generate assembly for a file
-src/LoRa-RP2040.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_pico_lib.dir/build.make CMakeFiles/LoRa_pico_lib.dir/src/LoRa-RP2040.cpp.s
-.PHONY : src/LoRa-RP2040.cpp.s
-
 src/LoRa.obj: src/LoRa.cpp.obj
 .PHONY : src/LoRa.obj
 
@@ -3248,30 +3135,6 @@ src/Pressure.s: src/Pressure.cpp.s
 src/Pressure.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Pressure.dir/build.make CMakeFiles/Pressure.dir/src/Pressure.cpp.s
 .PHONY : src/Pressure.cpp.s
-
-src/Print.obj: src/Print.cpp.obj
-.PHONY : src/Print.obj
-
-# target to build an object file
-src/Print.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_print.dir/build.make CMakeFiles/LoRa_print.dir/src/Print.cpp.obj
-.PHONY : src/Print.cpp.obj
-
-src/Print.i: src/Print.cpp.i
-.PHONY : src/Print.i
-
-# target to preprocess a source file
-src/Print.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_print.dir/build.make CMakeFiles/LoRa_print.dir/src/Print.cpp.i
-.PHONY : src/Print.cpp.i
-
-src/Print.s: src/Print.cpp.s
-.PHONY : src/Print.s
-
-# target to generate assembly for a file
-src/Print.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoRa_print.dir/build.make CMakeFiles/LoRa_print.dir/src/Print.cpp.s
-.PHONY : src/Print.cpp.s
 
 src/SDCard.obj: src/SDCard.cpp.obj
 .PHONY : src/SDCard.obj
@@ -3472,6 +3335,9 @@ help:
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.obj"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.i"
+	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_interp/interp.s"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... Users/josephloftin/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
@@ -3620,18 +3486,12 @@ help:
 	@echo "... src/GPS.obj"
 	@echo "... src/GPS.i"
 	@echo "... src/GPS.s"
-	@echo "... src/LoRa-RP2040.obj"
-	@echo "... src/LoRa-RP2040.i"
-	@echo "... src/LoRa-RP2040.s"
 	@echo "... src/LoRa.obj"
 	@echo "... src/LoRa.i"
 	@echo "... src/LoRa.s"
 	@echo "... src/Pressure.obj"
 	@echo "... src/Pressure.i"
 	@echo "... src/Pressure.s"
-	@echo "... src/Print.obj"
-	@echo "... src/Print.i"
-	@echo "... src/Print.s"
 	@echo "... src/SDCard.obj"
 	@echo "... src/SDCard.i"
 	@echo "... src/SDCard.s"
