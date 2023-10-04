@@ -17,7 +17,7 @@ bool SD_Card_t::begin()
     return true;
 }
 
-void SD_Card_t::write(std::string *data)
+void SD_Card_t::write(char *data)
 { // Mount drive
     fr = f_mount(&fs, "0:", 1);
     if (fr != FR_OK)
@@ -36,8 +36,11 @@ void SD_Card_t::write(std::string *data)
             ;
     }
 
+    f_lseek(&fil, pos);
+
     // Write something to file
-    ret = f_printf(&fil, "This is a test\r\n");
+    ret = f_printf(&fil, data);
+
     if (ret < 0)
     {
         printf("ERROR: Could not write to file (%d)\r\n", ret);
@@ -45,7 +48,8 @@ void SD_Card_t::write(std::string *data)
         while (true)
             ;
     }
-    ret = f_printf(&fil, "of writing to an SD card.\r\n");
+
+    pos = f_tell(&fil);
 
     // Close file
     fr = f_close(&fil);

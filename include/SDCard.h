@@ -14,8 +14,9 @@ public:
     char buf[100];
     char filename[9] = "data.txt";
     bool connected = false;
+    unsigned long pos = 0;
 
     SD_Card_t();
     bool begin();
-    void write(std::string *data);
+    void write(char *data);
 };

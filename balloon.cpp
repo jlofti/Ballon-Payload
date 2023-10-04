@@ -28,7 +28,7 @@
 #define LED_RED 14
 #define LED_GREEN 15
 #define LED_ONBOARD 25
-#define LED_CUTDOWN 13
+#define LED_CUTDOWN 6
 #define THERMISTOR_PORT
 
 // Frequencies and Speeds
@@ -174,7 +174,7 @@ int main()
 	SX1278->begin(LORA_FREQ);
 	GPS->begin(i2cOne);
 	PressureSensor->begin(i2cOne);
-	// SD->begin();
+	SD->begin();
 
 	printf("Starting Health Check...\n");
 
@@ -271,8 +271,10 @@ int main()
 
 			printf("******************************\n");
 			lastPrintSec = curTime.sec;
-			// std::string test = "";
-			//  SD->write(&test);
+			char sdwrite[15];
+			snprintf(sdwrite, 15, "Run %d \r\n", testTimer);
+			printf("%s", sdwrite);
+			SD->write(sdwrite);
 			printf("\n");
 		}
 	}
