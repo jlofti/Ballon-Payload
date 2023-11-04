@@ -5,6 +5,7 @@ include(pico_sdk_import.cmake)
 project(Balloon C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
+set(PICO_CXX_ENABLE_EXCEPTIONS 1)
 
 pico_sdk_init()
 
@@ -25,7 +26,7 @@ target_link_libraries(GPS hardware_i2c pico_stdlib i2cDevice)
 target_link_libraries(Pressure hardware_i2c pico_stdlib i2cDevice)
 target_link_libraries(i2cDevice hardware_i2c)
 target_link_libraries(Thermistor hardware_adc pico_stdlib hardware_gpio)
-target_link_libraries(CommandHandler pico_sync)
+target_link_libraries(CommandHandler pico_sync hardware_gpio)
 target_link_libraries(SDCard FatFs_SPI)
 
 add_subdirectory(include/SD_Card/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI spi_build)

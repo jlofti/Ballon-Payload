@@ -39,11 +39,12 @@
 #define MSG_SEND_INTERVAL_SEC 5
 #define DEBUG_PRINT_INTERVAL 5
 #define POST_INIT_DELAY_MS 5000
-#define WATCHDOG_TIMEOUT_MS 1000000
+#define WATCHDOG_TIMEOUT_MS 10000
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
-#define DEBUG 1
+#define DEBUG 0
+#define BEACON 0
 #define EVER \
 	;        \
 	;
@@ -103,6 +104,14 @@ void activateCutdown()
 // Core 2 Main loop - Deals with radio
 void core1_entry()
 {
+	bool watchdogReset = watchdog_caused_reboot();
+	if (watchdogReset)
+	{
+		printf("**********\n");
+		printf("Watchdog reboot happened\n");
+		printf("**********\n");
+	}
+
 	printf("Hello from Core 2!\n");
 	while (1)
 	{
@@ -119,6 +128,7 @@ void core1_entry()
 		if (SX1278->radio.parsePacket() != 0)
 		{
 			std::string response = "";
+			printf("&&&&&&&&&&\n");
 			printf("Received via poll: ");
 
 			// Read until done
@@ -132,6 +142,7 @@ void core1_entry()
 			// Print out recieved message
 			printf("%s", response.c_str());
 			printf(" RSSI: %d\n", SX1278->radio.packetRssi());
+			printf("&&&&&&&&&&\n");
 
 			// Add command to queue
 			// cmd_t sid = static_cast<cmd_t>(response[0] - 0x30);
@@ -208,6 +219,7 @@ int main()
 
 	for (EVER)
 	{
+
 		// Check time
 		rtc_get_datetime(&curTime);
 		int dispatchDifference = abs(curTime.sec - lastTransmitSec);
@@ -225,8 +237,10 @@ int main()
 		availableBytes = GPS->readGPS(GPSbuf, availableBytes);
 		GPS->setData(GPSbuf, availableBytes);
 
+		commandHandler->updateDispatchData(PressureSensor->temp, Thermistor->tempK, PressureSensor->pressure, GPS->lat, GPS->lon, GPS->time, GPS->alt);
+
 		// Check if enough time has elapsed for regular message pings
-		if (dispatchDifference >= MSG_SEND_INTERVAL_SEC)
+		if (dispatchDifference >= MSG_SEND_INTERVAL_SEC && BEACON)
 		{
 			commandHandler->addCommand(REGULAR_TRANSMISSION);
 			lastTransmitSec = curTime.sec;

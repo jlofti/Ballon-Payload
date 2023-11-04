@@ -51,7 +51,7 @@ uint32_t CommandHandler_t::getCommand()
 std::string CommandHandler_t::createDispatch(sid_t cmd_, uint8_t param_)
 {
     // Dispatch to be constructed
-    char dispatch[30] = "";
+    char dispatch[128] = "";
 
     switch (cmd_)
     {
@@ -65,11 +65,11 @@ std::string CommandHandler_t::createDispatch(sid_t cmd_, uint8_t param_)
         break;
     case DATA:
         printf("Data Dispatch Added");
-        snprintf(dispatch, 30, "heres data");
+        snprintf(dispatch, 30, std::to_string(lat).append(std::to_string(lon)).c_str());
         break;
     case REGULAR:
         printf("Regular Dispatch Added");
-        snprintf(dispatch, 30, "I'm data");
+        snprintf(dispatch, 30, "Beacon");
         break;
 
     case ACKREC:
@@ -197,3 +197,14 @@ uint8_t CommandHandler_t::getParam(uint32_t cmd_)
     uint8_t param = (cmd_ & PARAM_BITMASK);
     return param;
 }
+
+void CommandHandler_t::updateDispatchData(float tempC_, float tempK_, float pressure_, float lat_, float lon_, float time_, float alt_)
+{
+    this->tempC = tempC_;
+    this->tempK = tempK_;
+    this->pressure = pressure_;
+    this->lat = lat_;
+    this->lon = lon_;
+    this->time = time_;
+    this->alt = alt_;
+};

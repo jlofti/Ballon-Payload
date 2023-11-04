@@ -137,22 +137,29 @@ void GPS_t::setAndExtractGNGGAFields(std::string *sentence_)
     }
 
     // Set all fields
-    this->time = std::stof(fields[TIME_FIELD]);
-    this->lat = std::stof(fields[LAT_FIELD]) / 100.0;
-
-    if (fields[LAT_NS_FIELD].compare("S") == 0)
+    try
     {
-        this->lat *= -1;
+        this->time = std::stof(fields[TIME_FIELD]);
+        this->lat = std::stof(fields[LAT_FIELD]) / 100.0;
+
+        if (fields[LAT_NS_FIELD].compare("S") == 0)
+        {
+            this->lat *= -1;
+        }
+
+        this->lon = std::stof(fields[LON_FIELD]) / 100.0;
+
+        if (fields[LON_EW_FIELD].compare("W") == 0)
+        {
+            this->lon *= -1;
+        }
+
+        this->alt = std::stof(fields[ALT_FIELD]);
     }
-
-    this->lon = std::stof(fields[LON_FIELD]) / 100.0;
-
-    if (fields[LON_EW_FIELD].compare("W") == 0)
+    catch (...)
     {
-        this->lon *= -1;
-    }
-
-    this->alt = std::stof(fields[ALT_FIELD]);
+        printf("No lock\n");
+    };
 
     return;
 }

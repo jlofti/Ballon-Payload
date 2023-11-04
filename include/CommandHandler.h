@@ -1,6 +1,8 @@
 #include "pico/sync.h"
 #include <memory>
 #include <string>
+#include <stdio.h>
+#include "hardware/gpio.h"
 #include "./LimitedQueue.h"
 #define CALLSIGN 0x0101
 #define CALLSIGN_BITMASK 0xFFFF0000
@@ -30,9 +32,11 @@ public:
 
     float tempC;
     float tempK;
-    signed int pressure;
+    float pressure;
     float lat;
     float lon;
+    float time;
+    float alt;
 
     CommandHandler_t();
 
@@ -64,6 +68,9 @@ public:
 
     static void activateCutdown()
     {
+        gpio_put(6, 1);
         return;
     };
+
+    void updateDispatchData(float tempC_, float tempK_, float pressure_, float lat_, float lon_, float time_, float alt_);
 };
