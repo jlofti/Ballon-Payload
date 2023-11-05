@@ -1,14 +1,21 @@
 #include "pico/sync.h"
 #include <memory>
+#include <cstring>
 #include <string>
 #include <stdio.h>
 #include "hardware/gpio.h"
 #include "./LimitedQueue.h"
-#define CALLSIGN 0x0101
-#define CALLSIGN_BITMASK 0xFFFF0000
+
 #define SID_BITMASK 0x0000FF00
 #define PARAM_BITMASK 0x000000FF
 #define REGULAR_TRANSMISSION 0xFFFF0400
+
+#define CALLSIGN "W5UL-FB"
+#define PADDING "00"
+
+#define CALLSIGN_LENGTH 7
+#define SID_LENGTH 1
+#define PARAM_LENGTH 1
 
 enum sid_t : uint8_t
 {
@@ -18,6 +25,16 @@ enum sid_t : uint8_t
     REGULAR = 4,
     ACKREC = 5,
     ACKSEND = 6
+};
+
+enum param_t : uint8_t
+{
+    LATLON = 0,
+    TEMPC = 1,
+    TEMPK = 2,
+    PRESSURE = 3,
+    TIME = 4,
+    ALT = 5
 };
 
 class CommandHandler_t
@@ -50,21 +67,19 @@ public:
 
     std::string getDispatch();
 
-    std::string createDispatch(sid_t cmd_, uint8_t param_);
+    std::string createDispatch(sid_t cmd_, param_t param_);
 
     uint32_t getCommand();
 
     void executeCommand(uint32_t cmd_);
 
-    bool validateCommand(std::string cmd_);
+    bool validateCommand(std::string cmd_, uint32_t *scmd_);
 
     uint32_t sanitizeCommand(std::string cmd_);
 
-    uint16_t getCallsign(uint32_t cmd_);
-
     sid_t getSid(uint32_t cmd_);
 
-    uint8_t getParam(uint32_t cmd_);
+    param_t getParam(uint32_t cmd_);
 
     static void activateCutdown()
     {
@@ -73,4 +88,10 @@ public:
     };
 
     void updateDispatchData(float tempC_, float tempK_, float pressure_, float lat_, float lon_, float time_, float alt_);
+
+    int getRecCount();
+
+    std::string createBeaconPayload();
+
+    std::string createSDCardPayload();
 };

@@ -43,8 +43,8 @@
 #define CUTDOWN_TIME_HOURS 5
 
 // Other
-#define DEBUG 0
-#define BEACON 0
+#define DEBUG 1
+#define BEACON 1
 #define EVER \
 	;        \
 	;
@@ -145,11 +145,9 @@ void core1_entry()
 			printf("&&&&&&&&&&\n");
 
 			// Add command to queue
-			// cmd_t sid = static_cast<cmd_t>(response[0] - 0x30);
-
-			if (commandHandler->validateCommand(response))
+			uint32_t cmd;
+			if (commandHandler->validateCommand(response, &cmd))
 			{
-				uint32_t cmd = commandHandler->sanitizeCommand(response);
 				commandHandler->addCommand(cmd);
 			}
 			else
@@ -282,13 +280,12 @@ int main()
 			printf("Hour: %d, Min: %d, Sec: %d\n", curTime.hour, curTime.min, curTime.sec);
 			printf("Loop done %d\n", counter);
 			printf("Watchdog reset\n");
+			printf("Manual commands sent %d, Acks Received %d\n", commandHandler->cmdSent, commandHandler->ackRec);
 
 			printf("******************************\n");
 			lastPrintSec = curTime.sec;
-			char sdwrite[15];
-			snprintf(sdwrite, 15, "Run %d \r\n", testTimer);
-			printf("%s", sdwrite);
-			SD->write(sdwrite);
+
+			SD->write(commandHandler->createSDCardPayload().data());
 			printf("\n");
 		}
 	}
